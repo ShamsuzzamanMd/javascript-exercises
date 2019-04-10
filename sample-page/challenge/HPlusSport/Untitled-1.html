@@ -1,0 +1,82 @@
+HomeJQuery TutorialHow To Use jQuery In Html
+How To Use jQuery In Html
+Jerry Zhao May 12, 2018 0
+ 
+jQuery is a fast and simple JavaScript framework, it can simplify the process of querying DOM objects, processing events, making animations, and handling Ajax interactions. Using jQuery will change the way you write JavaScript code. If you need 20 lines of code in JavaScript to run a function, jQuery will need only 5 lines to make it easy. This example will tell you how to use jQuery in html page.
+
+
+1. Install jQuery In Html Page.
+Before use it, you first need to install jQuery library in your html page. It is very easy follow below steps.
+
+Download jQuery library js file from page http://jquery.com/download/. Just right click the download link and click Save Link As menu item in the popup menu.
+download jQuery library js file
+Then save the download file in a local directory. I just save it in my jQuery project lib folder.
+save jquery js file in local project lib folder
+If you want to use the jQuery js lib in your html page, you just need to create a html file and add below code in the head section to include it.
+<script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+Above is just include the local jQuery lib js. You can also include a google provided online version of the jQuery lib js which can make the js include process more faster and stable. And can reduce your website bandwidth usage. This is the most recommended way.
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+Now you have installed the jQuery lib in html page successfully. You can use numerous functions which it provided in your html page, you can see that jQuery make your JavaScript coding amazing.
+READ :   jQuery Contains, Has, Hidden, Visible, Child Selector Example
+2. jQuery Example.
+There are two examples, each example is write in one html page.
+
+
+save jquery js file in local project lib folder
+
+2.1 jQuery Hello World Alert Example.
+This example will show an alert when the document load ready, and display a button. When you click the button, it will popup the button original text and set new text to the button and change the button text and background color.
+
+jquery hello world alert example
+
+
+hello-world-alert.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Hello World Example</title>
+    <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+
+        /*  jQuery function is the entrance function that jQuery execute.
+        *
+        *   Below code means when the html document load ready, this is similar to window.onload() = function(){......};
+        *
+        *   You can also use $(document).ready(function(){......}), $ is an alias of jQuery.
+        *
+        *   You can even use $(function(){......}) to process document load ready event.
+        * */
+        jQuery(document).ready(function(){
+
+            // Show an alert popup message.
+            alert('Hello World From JQuery.');
+
+            // Get the button object by it's id.
+            var button = jQuery('#click_button')
+
+            // When click this button then execute below function.
+            button.bind('click', function () {
+
+                // Get button original text.
+                const original_text = jQuery(this).text();
+
+                // Alert the text.
+                alert('You click the button');
+
+                alert('The original button text is : ' + original_text);
+
+                // Set the button new text. And change the button text and background color.
+                jQuery(this).text('Wish you like JQuery :)').css({color:'yellow', background:'blue'});
+            })
+
+        });
+    </script>
+</head>
+<body>
+<button id="click_button">
+    Welcome to JQuery world.
+</button>
+</body>
+</html>

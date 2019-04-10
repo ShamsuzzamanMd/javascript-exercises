@@ -5,6 +5,17 @@
   <title>HPlus Sport</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    $('[data-type="vitamin"]').css('background', 'black');
+    $('[data-type="mineralwater"]').css('background', 'orange');
+  });
+  
+  </script>
 </head>
 <body>
 
@@ -46,6 +57,11 @@
     <h2 class="headline">Products</h2>
     <p>H+ Sport is <em>dedicated to creating</em> eco-friendly, high-quality, nutrient-rich, nutritional products that <em>enhance active lifestyles</em>. We <a href="#guarantee">guarantee</a> it. Take a look at some of our products.</p>
   </div><!-- container -->
+  <input type="checkbox" name="vitamin" value="Vitamin "> vitamin<br>
+  <input type="checkbox" name="mineralwater" value="Mineral water"> mineral water<br>
+  <input type="checkbox" name="Chocolate" value="Chocolate"> chocolate bar<br>
+
+
   <ul class="product-list">
     <li class="product-item" data-prod_id="V-A1037">
         <img class="product-image" src="images/products/vitamin-a.jpg" alt="Vitamin A - Product Photo">
